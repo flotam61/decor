@@ -14,8 +14,8 @@ def decor_path(path):
             logi["Дата и время:"] = dt
             logi["Аргументы функции"] = argument
             logi["Возвращаемое значение"] = result
-            with open(path, 'w', encoding="UTF-8") as file:
+            with open(path, 'a', encoding="UTF-8") as file:
                 json.dump(logi, file, indent=3, sort_keys=True, default=str, ensure_ascii=False)
-            return logi
+            return result
         return new_function
     return decor
